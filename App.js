@@ -16,17 +16,7 @@ import {
   StatusBar,
 } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import AndroidTextInputNativeComponent
-  from 'react-native/Libraries/Components/TextInput/AndroidTextInputNativeComponent';
-import SinglelineTextInputNativeComponent
-  from 'react-native/Libraries/Components/TextInput/RCTMultilineTextInputNativeComponent';
+import SinglelineTextInputNativeComponent from 'react-native/Libraries/Components/TextInput/RCTMultilineTextInputNativeComponent';
 
 const App: () => React$Node = () => {
   return (
@@ -70,7 +60,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     fontSize: 24,
     marginLeft: 20,
-  }
+  },
 });
 
 export default App;
