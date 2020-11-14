@@ -27,6 +27,9 @@ const App: () => React$Node = () => {
           style={styles.input}
           placeholder="Add an item!"
         />
+        <ScrollView>
+          <Text style={styles.totoTitle}>Todo List</Text>
+        </ScrollView>
       </View>
     </SafeAreaView>
   );
@@ -60,6 +63,12 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     fontSize: 24,
     marginLeft: 20,
+  },
+  totoTitle: {
+    fontSize: 20,
+    marginLeft: 20,
+    marginTop: 20,
+    fontWeight: '600',
   },
 });
 
