@@ -17,16 +17,14 @@ import {
 } from 'react-native';
 
 import SinglelineTextInputNativeComponent from 'react-native/Libraries/Components/TextInput/RCTMultilineTextInputNativeComponent';
+import TodoInsert from './components/TodoInsert';
 
 const App: () => React$Node = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.appTitle}>Hello World</Text>
       <View style={styles.card}>
-        <SinglelineTextInputNativeComponent
-          style={styles.input}
-          placeholder="Add an item!"
-        />
+        <TodoInsert />
         <ScrollView>
           <Text style={styles.totoTitle}>Todo List</Text>
         </ScrollView>
