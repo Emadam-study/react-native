@@ -18,6 +18,7 @@ import {
 
 import SinglelineTextInputNativeComponent from 'react-native/Libraries/Components/TextInput/RCTMultilineTextInputNativeComponent';
 import TodoInsert from './components/TodoInsert';
+import TodoList from './components/TodoList';
 
 const App: () => React$Node = () => {
   return (
@@ -25,9 +26,7 @@ const App: () => React$Node = () => {
       <Text style={styles.appTitle}>Hello World</Text>
       <View style={styles.card}>
         <TodoInsert />
-        <ScrollView>
-          <Text style={styles.totoTitle}>Todo List</Text>
-        </ScrollView>
+        <TodoList />
       </View>
     </SafeAreaView>
   );
@@ -61,12 +60,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     fontSize: 24,
     marginLeft: 20,
-  },
-  totoTitle: {
-    fontSize: 20,
-    marginLeft: 20,
-    marginTop: 20,
-    fontWeight: '600',
   },
 });
 
