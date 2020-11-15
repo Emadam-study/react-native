@@ -13,6 +13,11 @@ const TodoListItem = () => {
       <Text style={[styles.text, styles.strikeText]}>
         Items will be shown here
       </Text>
+      <TouchableOpacity style={styles.buttonContainer}>
+        <Text style={styles.buttonText}>
+          <Icon name="delete" size={30} color="#e33057" />
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 };
