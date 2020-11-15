@@ -30,12 +30,16 @@ const App: () => React$Node = () => {
     ]);
   };
 
+  const onRemove = (id) => (e) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.appTitle}>Hello World</Text>
       <View style={styles.card}>
         <TodoInsert onAddTodo={addTodo} />
-        <TodoList todos={todos} />
+        <TodoList todos={todos} onRemove={onRemove} />
       </View>
     </SafeAreaView>
   );
