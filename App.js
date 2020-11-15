@@ -34,12 +34,20 @@ const App: () => React$Node = () => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
+  const onToggle = (id) => (e) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? {...todo, checked: !todo.checked} : todo,
+      ),
+    );
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.appTitle}>Hello World</Text>
       <View style={styles.card}>
         <TodoInsert onAddTodo={addTodo} />
-        <TodoList todos={todos} onRemove={onRemove} />
+        <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
       </View>
     </SafeAreaView>
   );
