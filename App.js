@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -21,12 +21,21 @@ import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
 
 const App: () => React$Node = () => {
+  const [todos, setTodos] = useState([]);
+
+  const addTodo = (text) => {
+    setTodos([
+      ...todos,
+      {id: Math.random().toString(), textValue: text, checked: false}
+    ]);
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.appTitle}>Hello World</Text>
       <View style={styles.card}>
-        <TodoInsert />
-        <TodoList />
+        <TodoInsert onAddTodo={addTodo} />
+        <TodoList todos={todos} />
       </View>
     </SafeAreaView>
   );
@@ -62,5 +71,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
 });
+
+
 
 export default App;
